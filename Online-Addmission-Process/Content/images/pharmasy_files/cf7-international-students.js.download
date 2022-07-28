@@ -1,0 +1,344 @@
+
+var course_list_mu = ['BE', 'B.Arch', 'B.Sc.', 'BA', 'B.Com', 'BCA', 'BBA', 'MA', 'MBA', 'MCA', 'M.Sc.', 'PGDCA'];
+var course_list_mefgi = ['BE', 'ME', 'B.Sc.', 'BA', 'B.Com', 'BCA', 'BBA', 'MA', 'MBA', 'MCA', 'M.Sc.'];
+var yos_list = ['1', '2', '3', '4', '5'];
+
+var university_list = [
+						'Illinois Institute of Technology (USA) - Short Course', 
+						'Wroclaw University of Science & Technology (Poland) - Summer School 3E - Engineering-Technology', 
+						'Wroclaw University of Science & Technology (Poland) - Summer School TECHSummer - Engineering-Technology-Management-Architecture', 
+						'University of Applied Sciences Aschaffenburg (Germany)', 
+						'SKODA Auto University (Czech Republic) - Summer School-Short Course'
+					];
+var programme_list = [];
+programme_list['Illinois Institute of Technology (USA) - Short Course'] = ['Biology', 'Computational Science', 'Computer Discovery Camp (limited to girls only)', 'Freelance Coder Camp', 'Global Chicago', 'Intro to Robotics', 'NxtGen'];
+programme_list['Wroclaw University of Science & Technology (Poland) - Summer School 3E - Engineering-Technology'] = ['Electrical Engineering', 'Mechanical and Power Engineering', 'Computer', 'Civil Engineering', 'Environmental Engineering'];
+programme_list['Wroclaw University of Science & Technology (Poland) - Summer School TECHSummer - Engineering-Technology-Management-Architecture'] = ['Architecture', 'Civil Engineering', 'Electronics', 'Electrical', 'Environmental', 'Computer Science', 'Business-Management', 'Mechanical'];
+programme_list['University of Applied Sciences Aschaffenburg (Germany)'] = ['Management AND Open to ALL who are interested in learning new Business skills'];
+programme_list['SKODA Auto University (Czech Republic) - Summer School-Short Course'] = ['Management AND Open to ALL who are interested in learning new Business skills'];
+
+var module_list = [];
+module_list['Illinois Institute of Technology (USA) - Short Course'] = [];
+module_list['Wroclaw University of Science & Technology (Poland) - Summer School 3E - Engineering-Technology'] = [];
+module_list['Wroclaw University of Science & Technology (Poland) - Summer School TECHSummer - Engineering-Technology-Management-Architecture'] = [];
+module_list['University of Applied Sciences Aschaffenburg (Germany)'] = [];
+module_list['SKODA Auto University (Czech Republic) - Summer School-Short Course'] = [];
+
+module_list['Illinois Institute of Technology (USA) - Short Course']['Biology'] = ['DNA technology techniques and Bioinformatics, and analyzing microorganisms found in the environment and on their own bodies.'];
+module_list['Illinois Institute of Technology (USA) - Short Course']['Computational Science'] = ['Will integrate math and science with computation as the unifying concept.'];
+module_list['Illinois Institute of Technology (USA) - Short Course']['Computer Discovery Camp (limited to girls only)'] = ['purpose of the camp is to stimulate interest in computers and to lay a foundation for careers in computer science (CS) and related disciplines'];
+module_list['Illinois Institute of Technology (USA) - Short Course']['Freelance Coder Camp'] = ['programming with Java, C++, Python, and web development with HTML/CSS/JavaScript'];
+module_list['Illinois Institute of Technology (USA) - Short Course']['Global Chicago'] = ['opportunity to explore the ways that Chicago is connected to the world through immigration, commerce, and tourism'];
+module_list['Illinois Institute of Technology (USA) - Short Course']['Intro to Robotics'] = ['engineering design process, a university-level programming language, and open-ended problem solving strategies. Students, working in small hands-on teams, will be presented with several authentic design challenges'];
+module_list['Illinois Institute of Technology (USA) - Short Course']['NxtGen'] = ['course offers a glimpse of the future of the internet, computing, programming, networking, and the next wave of emerging technologies - Broad Areas 1) Security OR 2) Development'];
+
+module_list['Wroclaw University of Science & Technology (Poland) - Summer School 3E - Engineering-Technology']['Electrical Engineering'] = ['Acceptance and operating tests of electrical installations and devices', 'Power Quality', 'Programmable Logic Controllers PLC'];
+module_list['Wroclaw University of Science & Technology (Poland) - Summer School 3E - Engineering-Technology']['Mechanical and Power Engineering'] = ['Combustion technology for the power industry', 'Solar energy systems'];
+module_list['Wroclaw University of Science & Technology (Poland) - Summer School 3E - Engineering-Technology']['Computer'] = ['Python Hello World to Django Website for Internet of Things application'];
+module_list['Wroclaw University of Science & Technology (Poland) - Summer School 3E - Engineering-Technology']['Civil Engineering'] = ['Quality control and technical evaluation of building and civil engineering structures'];
+module_list['Wroclaw University of Science & Technology (Poland) - Summer School 3E - Engineering-Technology']['Environmental Engineering'] = ['Thermal comfort and renewable energy for low energy buildings'];
+
+module_list['Wroclaw University of Science & Technology (Poland) - Summer School TECHSummer - Engineering-Technology-Management-Architecture']['Architecture'] = ['Designing section: CAD, 3d scanning, 3d printing AND Seminary Section: Field studies and Analysis, Historical Section'];
+module_list['Wroclaw University of Science & Technology (Poland) - Summer School TECHSummer - Engineering-Technology-Management-Architecture']['Civil Engineering'] = ['Design of Steel Structures AND Design of Concrete Structures'];
+module_list['Wroclaw University of Science & Technology (Poland) - Summer School TECHSummer - Engineering-Technology-Management-Architecture']['Electronics'] = ['Data Communication & Networking AND Wireless Communication'];
+module_list['Wroclaw University of Science & Technology (Poland) - Summer School TECHSummer - Engineering-Technology-Management-Architecture']['Electrical'] = ['Energy Efficiency AND Risk Management'];
+module_list['Wroclaw University of Science & Technology (Poland) - Summer School TECHSummer - Engineering-Technology-Management-Architecture']['Environmental'] = ['Water Treatment Technology AND Waste Water Treatment Technology'];
+module_list['Wroclaw University of Science & Technology (Poland) - Summer School TECHSummer - Engineering-Technology-Management-Architecture']['Computer Science'] = ['Object Oriented Programming in Java'];
+module_list['Wroclaw University of Science & Technology (Poland) - Summer School TECHSummer - Engineering-Technology-Management-Architecture']['Business-Management'] = ['New Entreprise Management AND Strategic Management'];
+module_list['Wroclaw University of Science & Technology (Poland) - Summer School TECHSummer - Engineering-Technology-Management-Architecture']['Mechanical'] = ['Fundamentals of Machine Design - 2 AND Quality Engineering'];
+
+module_list['University of Applied Sciences Aschaffenburg (Germany)']['Management AND Open to ALL who are interested in learning new Business skills'] = ['1. Doing Business in Europe: The Single Market and Business Opportunities, The Euro, Digital Single Market/Digital Economy, 2. International Negotiations /Negotiating across Cultures (Simulation Games), 3. International Business Skills and Competences, 4. Cross-Cultural Communication'];
+
+module_list['SKODA Auto University (Czech Republic) - Summer School-Short Course']['Management AND Open to ALL who are interested in learning new Business skills'] = ['Global Management in Automotive Industry'];
+
+var module_details_list = [];
+module_details_list['Illinois Institute of Technology (USA) - Short Course'] = [];
+module_details_list['Illinois Institute of Technology (USA) - Short Course']['Biology'] = [];
+module_details_list['Illinois Institute of Technology (USA) - Short Course']['Biology']['DNA technology techniques and Bioinformatics, and analyzing microorganisms found in the environment and on their own bodies.'] = {
+	'date': '10th July to 20th July',
+	'fee': '500USD',
+	'inclusions': 'Lab Fees',
+	'exclusions': 'Airfare, Accomodation, Visa Costs, Insurance, Living Expenses'
+};
+module_details_list['Illinois Institute of Technology (USA) - Short Course']['Computational Science'] = [];
+module_details_list['Illinois Institute of Technology (USA) - Short Course']['Computational Science']['Will integrate math and science with computation as the unifying concept.'] = {
+	'date': '17th July to 4th August',
+	'fee': '1000USD',
+	'inclusions': '-',
+	'exclusions': 'Airfare, Accomodation Visa Costs, Insurance, Living Expenses'
+};
+module_details_list['Illinois Institute of Technology (USA) - Short Course']['Computer Discovery Camp (limited to girls only)'] = [];
+module_details_list['Illinois Institute of Technology (USA) - Short Course']['Computer Discovery Camp (limited to girls only)']['purpose of the camp is to stimulate interest in computers and to lay a foundation for careers in computer science (CS) and related disciplines'] = {
+	'date': '10th July to 20th July',
+	'fee': '75USD',
+	'inclusions': '-',
+	'exclusions': 'Airfare, Accomodation Visa Costs, Insurance, Living Expenses'
+};
+module_details_list['Illinois Institute of Technology (USA) - Short Course']['Freelance Coder Camp'] = [];
+module_details_list['Illinois Institute of Technology (USA) - Short Course']['Freelance Coder Camp']['programming with Java, C++, Python, and web development with HTML/CSS/JavaScript'] = {
+	'date': '10th July–10th August',
+	'fee': '1000USD',
+	'inclusions': '-',
+	'exclusions': 'Airfare, Visa Costs, Insurance, Living Expenses'
+};
+module_details_list['Illinois Institute of Technology (USA) - Short Course']['Global Chicago'] = [];
+module_details_list['Illinois Institute of Technology (USA) - Short Course']['Global Chicago']['opportunity to explore the ways that Chicago is connected to the world through immigration, commerce, and tourism'] = {
+	'date': 'June 26-30, 2017',
+	'fee': '500USD',
+	'inclusions': 'Lunch & Field Trips',
+	'exclusions': 'Visa Costs, Living Expenses, Accomodation, other meals & Airfare'
+};
+module_details_list['Illinois Institute of Technology (USA) - Short Course']['Intro to Robotics'] = [];
+module_details_list['Illinois Institute of Technology (USA) - Short Course']['Intro to Robotics']['engineering design process, a university-level programming language, and open-ended problem solving strategies. Students, working in small hands-on teams, will be presented with several authentic design challenges'] = {
+	'date': 'July 5-August 12, 2017',
+	'fee': '1000USD',
+	'inclusions': '-',
+	'exclusions': 'Airfare, Visa Costs, Insurance, Living Expenses'
+};
+module_details_list['Illinois Institute of Technology (USA) - Short Course']['NxtGen'] = [];
+module_details_list['Illinois Institute of Technology (USA) - Short Course']['NxtGen']['course offers a glimpse of the future of the internet, computing, programming, networking, and the next wave of emerging technologies - Broad Areas 1) Security OR 2) Development'] = {
+	'date': '10th July  - 3rd August',
+	'fee': '1000USD',
+	'inclusions': '',
+	'exclusions': ''
+};
+module_details_list['Wroclaw University of Science & Technology (Poland) - Summer School 3E - Engineering-Technology'] = [];
+module_details_list['Wroclaw University of Science & Technology (Poland) - Summer School 3E - Engineering-Technology']['Electrical Engineering'] = [];
+module_details_list['Wroclaw University of Science & Technology (Poland) - Summer School 3E - Engineering-Technology']['Electrical Engineering']['Acceptance and operating tests of electrical installations and devices'] = {
+	'date': '3- 28 July',
+	'fee': '740 Euros',
+	'inclusions': 'Tuition Fees, Accomodation, Lunch, Welcome & Farewell Dinners, Trips & Social Activities',
+	'exclusions': 'Airfare, Visa Costs, Insurance, Living Expenses'
+};
+module_details_list['Wroclaw University of Science & Technology (Poland) - Summer School 3E - Engineering-Technology']['Electrical Engineering']['Power Quality'] = {
+	'date': '3- 28 July',
+	'fee': '740 Euros',
+	'inclusions': 'Tuition Fees, Accomodation, Lunch, Welcome & Farewell Dinners, Trips & Social Activities',
+	'exclusions': 'Airfare, Visa Costs, Insurance, Living Expenses'
+};
+module_details_list['Wroclaw University of Science & Technology (Poland) - Summer School 3E - Engineering-Technology']['Electrical Engineering']['Programmable Logic Controllers PLC'] = {
+	'date': '3- 28 July',
+	'fee': '740 Euros',
+	'inclusions': 'Tuition Fees, Accomodation, Lunch, Welcome & Farewell Dinners, Trips & Social Activities',
+	'exclusions': 'Airfare, Visa Costs, Insurance, Living Expenses'
+};
+module_details_list['Wroclaw University of Science & Technology (Poland) - Summer School 3E - Engineering-Technology']['Mechanical and Power Engineering'] = [];
+module_details_list['Wroclaw University of Science & Technology (Poland) - Summer School 3E - Engineering-Technology']['Mechanical and Power Engineering']['Combustion technology for the power industry'] = {
+	'date': '3- 28 July',
+	'fee': '740 Euros',
+	'inclusions': 'Tuition Fees, Accomodation, Lunch, Welcome & Farewell Dinners, Trips & Social Activities',
+	'exclusions': 'Airfare, Visa Costs, Insurance, Living Expenses'
+};
+module_details_list['Wroclaw University of Science & Technology (Poland) - Summer School 3E - Engineering-Technology']['Mechanical and Power Engineering']['Solar energy systems'] = {
+	'date': '3- 28 July',
+	'fee': '740 Euros',
+	'inclusions': 'Tuition Fees, Accomodation, Lunch, Welcome & Farewell Dinners, Trips & Social Activities',
+	'exclusions': 'Airfare, Visa Costs, Insurance, Living Expenses'
+};
+module_details_list['Wroclaw University of Science & Technology (Poland) - Summer School 3E - Engineering-Technology']['Computer'] = [];
+module_details_list['Wroclaw University of Science & Technology (Poland) - Summer School 3E - Engineering-Technology']['Computer']['Python Hello World to Django Website for Internet of Things application'] = {
+	'date': '3- 28 July',
+	'fee': '740 Euros',
+	'inclusions': 'Tuition Fees, Accomodation, Lunch, Welcome & Farewell Dinners, Trips & Social Activities',
+	'exclusions': 'Airfare, Visa Costs, Insurance, Living Expenses'
+};
+module_details_list['Wroclaw University of Science & Technology (Poland) - Summer School 3E - Engineering-Technology']['Civil Engineering'] = [];
+module_details_list['Wroclaw University of Science & Technology (Poland) - Summer School 3E - Engineering-Technology']['Civil Engineering']['Quality control and technical evaluation of building and civil engineering structures'] = {
+	'date': '3- 28 July',
+	'fee': '740 Euros',
+	'inclusions': 'Tuition Fees, Accomodation, Lunch, Welcome & Farewell Dinners, Trips & Social Activities',
+	'exclusions': 'Airfare, Visa Costs, Insurance, Living Expenses'
+};
+module_details_list['Wroclaw University of Science & Technology (Poland) - Summer School 3E - Engineering-Technology']['Environmental Engineering'] = [];
+module_details_list['Wroclaw University of Science & Technology (Poland) - Summer School 3E - Engineering-Technology']['Environmental Engineering']['Thermal comfort and renewable energy for low energy buildings'] = {
+	'date': '3- 28 July',
+	'fee': '740 Euros',
+	'inclusions': 'Tuition Fees, Accomodation, Lunch, Welcome & Farewell Dinners, Trips & Social Activities',
+	'exclusions': 'Airfare, Visa Costs, Insurance, Living Expenses'
+};
+module_details_list['Wroclaw University of Science & Technology (Poland) - Summer School TECHSummer - Engineering-Technology-Management-Architecture'] = [];
+module_details_list['Wroclaw University of Science & Technology (Poland) - Summer School TECHSummer - Engineering-Technology-Management-Architecture']['Architecture'] = [];
+module_details_list['Wroclaw University of Science & Technology (Poland) - Summer School TECHSummer - Engineering-Technology-Management-Architecture']['Architecture']['Designing section: CAD, 3d scanning, 3d printing AND Seminary Section: Field studies and Analysis, Historical Section'] = {
+	'date': '19th June- 28th July',
+	'fee': '1000 Euros',
+	'inclusions': 'tuition fees, accommodation, lunches in students’ canteen, welcome and farewell dinner. trips, events, social and sport activities; welcome pack.',
+	'exclusions': 'Dinners, Airfare, Visa Costs, Insurance, Living Expenses'
+};
+module_details_list['Wroclaw University of Science & Technology (Poland) - Summer School TECHSummer - Engineering-Technology-Management-Architecture']['Civil Engineering'] = [];
+module_details_list['Wroclaw University of Science & Technology (Poland) - Summer School TECHSummer - Engineering-Technology-Management-Architecture']['Civil Engineering']['Design of Steel Structures AND Design of Concrete Structures'] = {
+	'date': '19th June- 28th July',
+	'fee': '1000 Euros',
+	'inclusions': 'tuition fees, accommodation, lunches in students’ canteen, welcome and farewell dinner. trips, events, social and sport activities; welcome pack.',
+	'exclusions': 'Dinners, Airfare, Visa Costs, Insurance, Living Expenses'
+};
+module_details_list['Wroclaw University of Science & Technology (Poland) - Summer School TECHSummer - Engineering-Technology-Management-Architecture']['Electronics'] = [];
+module_details_list['Wroclaw University of Science & Technology (Poland) - Summer School TECHSummer - Engineering-Technology-Management-Architecture']['Electronics']['Data Communication & Networking AND Wireless Communication'] = {
+	'date': '19th June- 28th July',
+	'fee': '1000 Euros',
+	'inclusions': 'tuition fees, accommodation, lunches in students’ canteen, welcome and farewell dinner. trips, events, social and sport activities; welcome pack.',
+	'exclusions': 'Dinners, Airfare, Visa Costs, Insurance, Living Expenses'
+};
+module_details_list['Wroclaw University of Science & Technology (Poland) - Summer School TECHSummer - Engineering-Technology-Management-Architecture']['Electrical'] = [];
+module_details_list['Wroclaw University of Science & Technology (Poland) - Summer School TECHSummer - Engineering-Technology-Management-Architecture']['Electrical']['Energy Efficiency AND Risk Management'] = {
+	'date': '19th June- 28th July',
+	'fee': '1000 Euros',
+	'inclusions': 'tuition fees, accommodation, lunches in students’ canteen, welcome and farewell dinner. trips, events, social and sport activities; welcome pack.',
+	'exclusions': 'Dinners, Airfare, Visa Costs, Insurance, Living Expenses'
+};
+module_details_list['Wroclaw University of Science & Technology (Poland) - Summer School TECHSummer - Engineering-Technology-Management-Architecture']['Environmental'] = [];
+module_details_list['Wroclaw University of Science & Technology (Poland) - Summer School TECHSummer - Engineering-Technology-Management-Architecture']['Environmental']['Water Treatment Technology AND Waste Water Treatment Technology'] = {
+	'date': '19th June- 28th July',
+	'fee': '1000 Euros',
+	'inclusions': 'tuition fees, accommodation, lunches in students’ canteen, welcome and farewell dinner. trips, events, social and sport activities; welcome pack.',
+	'exclusions': 'Dinners, Airfare, Visa Costs, Insurance, Living Expenses'
+};
+module_details_list['Wroclaw University of Science & Technology (Poland) - Summer School TECHSummer - Engineering-Technology-Management-Architecture']['Computer Science'] = [];
+module_details_list['Wroclaw University of Science & Technology (Poland) - Summer School TECHSummer - Engineering-Technology-Management-Architecture']['Computer Science']['Object Oriented Programming in Java'] = {
+	'date': '19th June- 28th July',
+	'fee': '1000 Euros',
+	'inclusions': 'tuition fees, accommodation, lunches in students’ canteen, welcome and farewell dinner. trips, events, social and sport activities; welcome pack.',
+	'exclusions': 'Dinners, Airfare, Visa Costs, Insurance, Living Expenses'
+};
+module_details_list['Wroclaw University of Science & Technology (Poland) - Summer School TECHSummer - Engineering-Technology-Management-Architecture']['Business-Management'] = [];
+module_details_list['Wroclaw University of Science & Technology (Poland) - Summer School TECHSummer - Engineering-Technology-Management-Architecture']['Business-Management']['New Entreprise Management AND Strategic Management'] = {
+	'date': '19th June- 28th July',
+	'fee': '1000 Euros',
+	'inclusions': 'tuition fees, accommodation, lunches in students’ canteen, welcome and farewell dinner. trips, events, social and sport activities; welcome pack.',
+	'exclusions': 'Dinners, Airfare, Visa Costs, Insurance, Living Expenses'
+};
+module_details_list['Wroclaw University of Science & Technology (Poland) - Summer School TECHSummer - Engineering-Technology-Management-Architecture']['Mechanical'] = [];
+module_details_list['Wroclaw University of Science & Technology (Poland) - Summer School TECHSummer - Engineering-Technology-Management-Architecture']['Mechanical']['Fundamentals of Machine Design - 2 AND Quality Engineering'] = {
+	'date': '19th June- 28th July',
+	'fee': '1000 Euros',
+	'inclusions': 'tuition fees, accommodation, lunches in students’ canteen, welcome and farewell dinner. trips, events, social and sport activities; welcome pack.',
+	'exclusions': 'Dinners, Airfare, Visa Costs, Insurance, Living Expenses'
+};
+module_details_list['University of Applied Sciences Aschaffenburg (Germany)'] = [];
+module_details_list['University of Applied Sciences Aschaffenburg (Germany)']['Management AND Open to ALL who are interested in learning new Business skills'] = [];
+module_details_list['University of Applied Sciences Aschaffenburg (Germany)']['Management AND Open to ALL who are interested in learning new Business skills']['1. Doing Business in Europe: The Single Market and Business Opportunities, The Euro, Digital Single Market/Digital Economy, 2. International Negotiations /Negotiating across Cultures (Simulation Games), 3. International Business Skills and Competences, 4. Cross-Cultural Communication'] = {
+	'date': '19th to 28th May 2017',
+	'fee': '395 Euros',
+	'inclusions': 'Tuition Fees, Welcome & Farewell Dinners',
+	'exclusions': 'Airfare, Accomodation, Visa Costs, Insurance, Living Expenses'
+};
+module_details_list['SKODA Auto University (Czech Republic) - Summer School-Short Course'] = [];
+module_details_list['SKODA Auto University (Czech Republic) - Summer School-Short Course']['Management AND Open to ALL who are interested in learning new Business skills'] = [];
+module_details_list['SKODA Auto University (Czech Republic) - Summer School-Short Course']['Management AND Open to ALL who are interested in learning new Business skills']['Global Management in Automotive Industry'] = {
+	'date': '23rd July to 5th August',
+	'fee': '900 Euros',
+	'inclusions': 'Tuition, lectures and seminars, accommodation, centrally organized excursions and field trips as well as organised cultural and entertainment programmes, welcome and farewell dinners, job monitoring/work experience, documents needed for visa purposes (issuing and sending via DHL), 24/7 service, access to the university library, free Wi-Fi on campus and access to PC rooms, registration into the university information system, transcript of records and certificate of completion.',
+	'exclusions': 'Airfare, Visa costs, Food, , insurance and visa.'
+};
+
+jQuery('[name=iep_student_of]').change(function() {
+	console.log(jQuery(this).val());
+	jQuery('[name=iep_course]').find('option').remove();
+	jQuery('[name=iep_course]').append('<option value=""></option>');
+	if (jQuery(this).val() == 'Marwadi University') {
+		for (var i = 0; i < course_list_mu.length; i++) {
+			jQuery('[name=iep_course]').append('<option value="'+course_list_mu[i]+'">'+course_list_mu[i]+'</option>');
+		}
+	} else if (jQuery(this).val() == 'MEFGI under GTU') {
+		for (var i = 0; i < course_list_mefgi.length; i++) {
+			jQuery('[name=iep_course]').append('<option value="'+course_list_mefgi[i]+'">'+course_list_mefgi[i]+'</option>');
+		}
+	}
+});
+
+jQuery('[name=iep_course]').change(function() {
+	console.log(jQuery(this).val());
+	jQuery('[name=iep_yos]').find('option').remove();
+	jQuery('[name=iep_yos]').append('<option value=""></option>');
+	jQuery('[name=iep_sos]').find('option').remove();
+	jQuery('[name=iep_sos]').append('<option value=""></option>');
+	for (var i = 1; i <= 10; i++) {
+		jQuery('p#p_iep_grade_'+i).hide(0);
+	}
+	for (var i = 0; i < yos_list.length; i++) {
+		jQuery('[name=iep_yos]').append('<option value="'+yos_list[i]+'">'+yos_list[i]+'</option>');
+	}
+});
+
+jQuery('[name=iep_yos]').change(function() {
+	console.log(jQuery(this).val());
+	jQuery('[name=iep_sos]').find('option').remove();
+	jQuery('[name=iep_sos]').append('<option value=""></option>');
+	for (var i = 1; i <= 10; i++) {
+		jQuery('p#p_iep_grade_'+i).hide(0);
+	}
+	var yos = parseInt(jQuery(this).val());
+	for (var i = (yos-1)*2+1; i <= yos*2; i++) {
+		jQuery('[name=iep_sos]').append('<option value="'+i+'">'+i+'</option>');
+	}
+});
+
+jQuery('[name=iep_sos]').change(function() {
+	console.log(jQuery(this).val());
+	jQuery('[name=iep_university]').find('option').remove();
+	jQuery('[name=iep_university]').append('<option value=""></option>');
+	for (var i = 1; i <= 10; i++) {
+		jQuery('p#p_iep_grade_'+i).hide(0);
+	}
+	var sos = parseInt(jQuery(this).val());
+	for (var i = 1; i <= sos; i++) {
+		jQuery('p#p_iep_grade_'+i).show(0);
+	}
+	for (var i = 0; i < university_list.length; i++) {
+		jQuery('[name=iep_university]').append('<option value="'+university_list[i]+'">'+university_list[i]+'</option>');
+	}
+});
+
+jQuery('[name=iep_university]').change(function() {
+	console.log(jQuery(this).val());
+	jQuery('[name=iep_programme]').find('option').remove();
+	jQuery('[name=iep_programme]').append('<option value=""></option>');
+	jQuery('[name=iep_module]').find('option').remove();
+	jQuery('[name=iep_module]').append('<option value=""></option>');
+	jQuery('p#p_iep_module').hide(0);
+	jQuery('p#p_iep_date').hide(0);
+	jQuery('p#p_iep_fees').hide(0);
+	jQuery('p#p_iep_inclusions').hide(0);
+	jQuery('p#p_iep_exclusions').hide(0);
+
+	var this_programme_list = programme_list[jQuery(this).val()];
+	for (var i = 0; i < this_programme_list.length; i++) {
+		jQuery('[name=iep_programme]').append('<option value="'+this_programme_list[i]+'">'+this_programme_list[i]+'</option>');
+	}
+});
+
+jQuery('[name=iep_programme]').change(function() {
+	console.log(jQuery(this).val());
+	jQuery('[name=iep_module]').find('option').remove();
+	jQuery('[name=iep_module]').append('<option value=""></option>');
+	jQuery('p#p_iep_module').hide(0);
+	jQuery('p#p_iep_date').hide(0);
+	jQuery('p#p_iep_fees').hide(0);
+	jQuery('p#p_iep_inclusions').hide(0);
+	jQuery('p#p_iep_exclusions').hide(0);
+	
+	var this_module_list = module_list[jQuery('[name=iep_university]').val()][jQuery(this).val()];
+	for (var i = 0; i < this_module_list.length; i++) {
+		jQuery('[name=iep_module]').append('<option value="'+this_module_list[i]+'">'+this_module_list[i]+'</option>');
+	}
+});
+
+jQuery('[name=iep_module]').change(function() {
+	console.log(jQuery(this).val());
+	var this_module_details = module_details_list[jQuery('[name=iep_university]').val()][jQuery('[name=iep_programme]').val()][jQuery(this).val()];
+	console.log(this_module_details);
+	jQuery('span#span_iep_module').html(jQuery(this).val());
+	jQuery('p#p_iep_module').show(0);
+	jQuery('[name=iep_date]').val(this_module_details.date)
+	jQuery('span#span_iep_date').html(this_module_details.date);
+	jQuery('p#p_iep_date').show(0);
+	jQuery('[name=iep_fees]').val(this_module_details.fee)
+	jQuery('span#span_iep_fees').html(this_module_details.fee);
+	jQuery('p#p_iep_fees').show(0);
+	jQuery('[name=iep_inclusions]').val(this_module_details.inclusions)
+	jQuery('span#span_iep_inclusions').html(this_module_details.inclusions);
+	jQuery('p#p_iep_inclusions').show(0);
+	jQuery('[name=iep_exclusions]').val(this_module_details.exclusions)
+	jQuery('span#span_iep_exclusions').html(this_module_details.exclusions);
+	jQuery('p#p_iep_exclusions').show(0);
+});
+

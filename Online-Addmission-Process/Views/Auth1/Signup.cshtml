@@ -1,0 +1,68 @@
+﻿@model updateted1.SIGNUP1
+
+@{
+    Layout = "";
+}
+
+
+<link href="~/Content/css/login.css" rel="stylesheet" />
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Signup</title>
+</head>
+<body>
+    <div class="login-wrap">
+        <div class="login-html">
+
+            <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign Up</label>
+            <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab"></label>
+            <div class="login-form">
+                <div class="sign-in-htm">
+                    @using (Html.BeginForm())
+                    {
+                        @*@Html.AntiForgeryToken()*@
+
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="group">
+                            <label for="user" class="label">Username</label>
+                            @*<input id="user" type="text" class="input">*@
+                            @Html.EditorFor(model => model.Username, new { htmlAttributes = new { @class = "input", required = "required" } })
+                            @Html.ValidationMessageFor(model => model.Username, "", new { @class = "" })
+                        </div>
+
+                        <div class="group">
+                            <label for="pass" class="label">Email Address</label>
+                            @Html.EditorFor(model => model.EmailAddress, new { htmlAttributes = new { @class = "input", required = "required" } })
+                            @Html.ValidationMessageFor(model => model.EmailAddress, "", new { @class = "" })
+                        </div>
+                        <div class="group">
+                            <label for="pass" class="label">Password</label>
+                            @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "input", required = "required" } })
+                            @Html.ValidationMessageFor(model => model.Password, "", new { @class = "" })
+                        </div>
+                        <div class="group">
+                            <label for="pass" class="label">Repeat Password</label>
+                            @Html.EditorFor(model => model.RepeatPassword, new { htmlAttributes = new { @class = "input", required = "required" } })
+                            @Html.ValidationMessageFor(model => model.RepeatPassword, "", new { @class = "" })
+                        </div>
+
+                        
+                        <div class="group">
+                            <button type="submit" class="button" value="Sign Up">Sign Up</button>
+                        </div>
+                        <div class="hr"></div>
+                        <div class="foot-lnk">
+                            <label for="tab-1">Already Member?>
+                        </div>
+
+
+                    }
+                </div>
+            </div>
+        </div>
+        <div>
+            @Html.ActionLink("Signin", "Login")
+        </div>
+</body>
+</html>

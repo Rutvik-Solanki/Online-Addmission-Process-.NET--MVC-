@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProjectModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Login">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmailAddress" Type="nvarchar" MaxLength="40" />
+    <Property Name="Password" Type="nvarchar" MaxLength="40" />
+  </EntityType>
+  <EntityType Name="Login1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmailAddress" Type="nvarchar" MaxLength="40" />
+    <Property Name="Password" Type="nvarchar" MaxLength="40" />
+  </EntityType>
+  <EntityType Name="SIGNUP">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="nvarchar" MaxLength="40" />
+    <Property Name="EmailAddress" Type="nvarchar" MaxLength="40" />
+    <Property Name="Password" Type="nvarchar" MaxLength="40" />
+    <Property Name="RepeatPassword" Type="nvarchar" MaxLength="40" />
+    <Property Name="MobileNumber" Type="bigint" />
+  </EntityType>
+  <EntityType Name="SIGNUP1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="nvarchar" MaxLength="40" />
+    <Property Name="EmailAddress" Type="nvarchar" MaxLength="40" />
+    <Property Name="Password" Type="nvarchar" MaxLength="40" />
+    <Property Name="RepeatPassword" Type="nvarchar" MaxLength="40" />
+  </EntityType>
+  <EntityContainer Name="ProjectModelStoreContainer">
+    <EntitySet Name="Login" EntityType="Self.Login" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Login1" EntityType="Self.Login1" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SIGNUP" EntityType="Self.SIGNUP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SIGNUP1" EntityType="Self.SIGNUP1" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

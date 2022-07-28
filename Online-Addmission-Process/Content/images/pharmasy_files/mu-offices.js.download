@@ -1,0 +1,18 @@
+jQuery(function() {
+	jQuery("select.mu-location-selector").change(function() {
+		jQuery(".mu-offices").empty().html("<center>Loading...</center>");
+		var location_id = jQuery(this).val();
+		jQuery.ajax({
+			url			: 	ajaxurl, 
+			dataType	: 	"html",
+			type		: 	"POST",
+			data		: 	{
+								"location" 	: 	location_id,
+								"action" 	: 	"get_mu_offices_by_location"
+							},
+			success		: 	function(data) {
+								jQuery(".mu-offices").html(data);
+							}
+		});
+	});
+});
